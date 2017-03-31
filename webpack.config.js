@@ -160,6 +160,10 @@ module.exports = function makeWebpackConfig() {
    * List: http://webpack.github.io/docs/list-of-plugins.html
    */
   config.plugins = [
+    new webpack.DllReferencePlugin({
+      scope: "xyz",
+      manifest: require('./dll/angular-manifest.json')
+    }),
     new webpack.LoaderOptionsPlugin({
       test: /\.scss$/i,
       options: {

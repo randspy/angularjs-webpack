@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from 'xyz/node_modules/angular/index.js';
 
 import '../style/app.css';
 
